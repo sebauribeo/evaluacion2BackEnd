@@ -1,10 +1,12 @@
-from tabnanny import verbose
 from django.db import models
 
 
 class Genre(models.Model):
     try:
         name = models.CharField(max_length = 100)
+
+        def __str__(self):
+            return self.name
 
     except Exception as e:
         print('Modelo no creado: ', e)
@@ -14,12 +16,18 @@ class Author(models.Model):
         name = models.CharField(max_length = 100)
         date_of_birth = models.DateField()
 
+        def __str__(self):
+            return self.name
+
     except Exception as e:
         print('Modelo no creado: ', e)
 
 class Publisher(models.Model):
     try:
         name = models.CharField(max_length = 100)
+
+        def __str__(self):
+            return self.name
 
     except Exception as e:
         print('Modelo no creado: ', e)

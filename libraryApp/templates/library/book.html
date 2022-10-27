@@ -1,7 +1,7 @@
 {% extends '../layout/base.html' %} {% block content %}
 
 <section class="container">
-  <h1 class="text-center my-5 border border-5 border-warning border-start-0 border-end-0 p-1">Agregar Libro</h1>
+  <h1 class="text-center my-5 border border-5 border-danger border-start-0 border-end-0 p-1">Agregar Libro</h1>
   <form method="POST" class="bg-dark container p-4 text-white">
     {% csrf_token %} {{ form.as_p }}
     <div class="text-center">
