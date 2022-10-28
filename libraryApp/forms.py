@@ -5,7 +5,7 @@ from libraryApp.models import Author, Book, Genre, Publisher
 
 # .objects.values_list('name', flat=True).order_by('id')
 class BookForm(forms.ModelForm):
-    name = forms.CharField(widget=forms.TextInput(
+    name = forms.CharField(max_length=100, widget=forms.TextInput(
         attrs={
             'class': 'form-control mt-2',
             'type': 'text',
@@ -34,7 +34,7 @@ class BookForm(forms.ModelForm):
 
 
 class AuthorForm(forms.ModelForm):
-    name = forms.CharField(widget=forms.TextInput(
+    name = forms.CharField(max_length=100, widget=forms.TextInput(
         attrs={
             'class': 'form-control mt-2',
             'type': 'text',
@@ -56,7 +56,7 @@ class AuthorForm(forms.ModelForm):
 
 class GenreForm(forms.ModelForm):
 
-    name = forms.CharField(widget=forms.TextInput(
+    name = forms.CharField(max_length=100, widget=forms.TextInput(
         attrs={
             'class': 'form-control mt-2',
             'type': 'text',
@@ -70,7 +70,7 @@ class GenreForm(forms.ModelForm):
 
 
 class PublisherForm(forms.ModelForm):
-    name = forms.CharField(widget=forms.TextInput(
+    name = forms.CharField(max_length=100, widget=forms.TextInput(
         attrs={
             'class': 'form-control mt-2',
             'type': 'text',
